@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+
+
+    <img src="images/illustration-woman-online-desktop.svg" alt="s" class="img-ilustrasi">
+
+    <div class="container">
+      <div class="img-wrap">
+        <img src="images/bg-pattern-mobile.svg" alt="img" class="shadow">
+      </div>
+      <div class="card-wrap">
+        <h1 class="title">FAQ</h1>
+        <div class="card">
+          <div class="question">
+            <h4 class="question__text">How Many team members can i invite ?</h4>
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="answer">
+            <p class="answer__text">You can invite up to 2 additional users on the Free plan. There is no limit on
+              team members for the Premium plan.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="question">
+            <h4 class="question__text">What is the maximum file upload size?</h4>
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="answer">
+            <p class="answer__text">No more than 2GB. All files in your account must fit your allotted storage space.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="question">
+            <h4 class="question__text">How do I reset my password?</h4>
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="answer">
+            <p class="answer__text">Click “Forgot password” from the login page or “Change password” from your profile
+              page.
+              A reset link will be emailed to you.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="question">
+            <h4 class="question__text">Can I cancel my subscription?</h4>
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="answer">
+            <p class="answer__text">Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="question">
+            <h4 class="question__text"> Do you provide additional support?</h4>
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <div class="answer">
+            <p class="answer__text"> Chat and email support is available 24/7. Phone lines are open during normal
+              business
+              hours.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <script>
+
+    document.body.addEventListener("click", function (e) {
+      if (e.target.classList.contains("fa-chevron-up")) {
+        e.target.parentElement.parentElement.classList.toggle('zoom');
+        e.target.previousElementSibling.style.color = "red";
+        setTimeout(function () {
+          e.target.previousElementSibling.style.color = "grey";
+        }, 5000)
+      }
+    })
+  </script>
+</body>
+
+</html>

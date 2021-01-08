@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+// color
+$SoftViolet: hsl(273, 75%, 66%);
+$SoftBlue: hsl(240, 73%, 65%);
+
+$VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+$DarkGrayishBlue: hsl(240, 6%, 50%);
+
+$Lightgrayishblue: hsl(240, 5%, 91%);
+
+html{
+  font-size: 12px;
+}
+body{
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(to bottom, #af67e9, #9f67e9, #8d66e9, #7a66e8, #6565e7);
+  height: 700px;
+}
+main{
+ 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  height: 620px;
+  flex-direction: column;
+
+  .img-ilustrasi{
+    position: relative;
+    width: 250px;
+    top: 6rem;
+  }
+}
+img{
+  display: inline-block;
+  max-width: 100%;
+}
+h4, p{
+  color: $DarkGrayishBlue;
+}
+h1{
+  color: $VeryDarkGrayishBlue;
+}
+.container{
+  // border: red solid 1px;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 90%;
+  box-shadow: 0px 10px 14px 0px rgba(0,0,0,0.29);
+  .img-wrap{
+    text-align: center;
+  }
+  .card-wrap{
+    // border: red solid 1px;
+    padding: 1.5rem;
+    .title{
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+  
+}
+.card{
+  margin: 1rem 0;
+  overflow: hidden;
+  height: 30px;
+  transition: 0.5s;
+  
+  .question{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    .fa-chevron-up{
+      cursor: pointer;
+    }
+  }
+}
+.zoom{
+  height: 90px;
+}
+.fa-chevron-up{
+  transition: 0.5s;
+  position: relative;
+  &:hover{
+    color: red;
+    transform: scale(2) rotate(180deg) //translate(0px,12px);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  main{
+    display: flex;
+    flex-direction: row;
+    // border: red solid 1px;
+    justify-content: center;
+    align-items: center;
+    .img-ilustrasi{
+    position: static;
+    width: 500px;
+    display: none;
+    
+    }
+    .container{
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     .card-wrap{
+       border: red solid 1px;
+     }
+     .img-wrap{
+       position: relative;
+       img{
+         display: none;
+       }
+       &::after{
+         content: "asa";
+         position: absolute;
+         width: 300px;
+         height: 300px;
+         background-image: url('');
+       }
+      
+     }
+    }
+  }
+}
