@@ -87,7 +87,7 @@
     document.body.addEventListener("click", function (e) {
       if (e.target.classList.contains("fa-chevron-up")) {
         e.target.parentElement.parentElement.classList.toggle('zoom');
-        e.target.previousElementSibling.style.color = "red";
+        e.target.previousElementSibling.style.color = "black";
         setTimeout(function () {
           e.target.previousElementSibling.style.color = "grey";
         }, 5000)
